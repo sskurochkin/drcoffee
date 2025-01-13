@@ -1,0 +1,385 @@
++include-style('personal')
+
+.personal
+	.personal-form
+		.personal-form__header
+			.personal-form__title.h2 Данные о компании
+			.personal-form__info Задолженность: 0.00 руб.
+		.personal-form__form(x-data="{edit:false}" )
+			form.form-block(:class="edit && 'edit'")
+				.form-block__fields
+					+input({
+						fg_mod: 'form-group--margin',
+						label_mod: 'form-control-label--small',
+						label: 'Название компании',
+						type: 'text',
+						required: true,
+						pattern: false,
+						validation: {
+							message: 'Обязательное поле',
+							regexp: 'Неверный формат',
+							emailaddress: ' ',
+							identical: false
+						}
+					})(value="Роаст.бай")
+
+					+input({
+						fg_mod: 'form-group--margin',
+						label_mod: 'form-control-label--small',
+						label: 'Адрес компании компании',
+						type: 'text',
+						placeholder: false,
+						required: true,
+						pattern: false,
+						validation: {
+							message: 'Обязательное поле',
+							regexp: 'Неверный формат',
+							emailaddress: ' ',
+							identical: false
+						}
+					})(value="Кирова 27 А")
+					+input({
+						fg_mod: 'form-group--margin',
+						label_mod: 'form-control-label--small',
+						label: 'УНП',
+						type: 'text',
+						placeholder: false,
+						required: false,
+						pattern: false,
+						validation: {
+							message: 'Обязательное поле',
+							regexp: 'Неверный формат',
+							emailaddress: ' ',
+							identical: false
+						}
+					})(value="123456789")
+					+input({
+					fg_mod: 'form-group--margin',
+					label_mod: 'form-control-label--small',
+					label: 'Имя  руководителя',
+					type: 'text',
+					placeholder: false,
+					required: false,
+					pattern: false,
+					validation: {
+						message: 'Обязательное поле',
+						regexp: 'Неверный формат',
+						emailaddress: ' ',
+						identical: false
+					}
+						})(value="Иванов Иван")
+					+input({
+					fg_mod: 'form-group--margin',
+					label_mod: 'form-control-label--small',
+					label: 'Номер телефона',
+					type: 'tel',
+					placeholder: false,
+					required: false,
+					pattern: false,
+					validation: {
+						message: 'Обязательное поле',
+						regexp: 'Неверный формат',
+						emailaddress: ' ',
+						identical: false
+					}
+						})(value="+375 (29) 12-23-456")
+
+
+				.form-block__footer
+					.form-edit(x-cloak x-show="edit")
+						.btn.btn--nav(@click="edit=false")
+							span Отмена
+						button(type="submit").btn.btn--cart
+							span Сохранить данные
+					.btn.btn--nav(x-cloak  x-show="!edit" @click="edit=true")
+						span Редактировать
+
+	.personal-form
+		.personal-form__header
+			.personal-form__title.h2 Для офиса
+			.personal-form__info Основной
+		.personal-form__form(x-data="{edit:false}" )
+			form.form-block(:class="edit && 'edit'")
+				.form-block__fields
+
+
+					+input({
+						fg_mod: 'form-group--margin',
+						label_mod: 'form-control-label--small',
+						label: 'Адрес компании компании',
+						type: 'text',
+						placeholder: false,
+						required: true,
+						pattern: false,
+						validation: {
+							message: 'Обязательное поле',
+							regexp: 'Неверный формат',
+							emailaddress: ' ',
+							identical: false
+						}
+					})(value="Кирова 27 А")
+					+input({
+						fg_mod: 'form-group--margin',
+						label_mod: 'form-control-label--small',
+						label: 'Получатель товара',
+						type: 'text',
+						placeholder: false,
+						required: false,
+						pattern: false,
+						validation: {
+							message: 'Обязательное поле',
+							regexp: 'Неверный формат',
+							emailaddress: ' ',
+							identical: false
+						}
+					})(value="Иванов Иван ")
+
+					+input({
+					fg_mod: 'form-group--margin',
+					label_mod: 'form-control-label--small',
+					label: 'Номер телефона',
+					type: 'tel',
+					placeholder: false,
+					required: false,
+					pattern: false,
+					validation: {
+						message: 'Обязательное поле',
+						regexp: 'Неверный формат',
+						emailaddress: ' ',
+						identical: false
+					}
+						})(value="+375 (29) 12-34-567")
+
+
+				.form-block__footer
+					.form-edit(x-cloak x-show="edit")
+						.btn.btn--nav(@click="edit=false")
+							span Отмена
+						button(type="submit").btn.btn--cart
+							span Сохранить данные
+					.btn.btn--nav(x-cloak  x-show="!edit" @click="edit=true")
+						span Редактировать
+	.personal-form
+		.personal-form__header
+			.personal-form__title.h2 Для ресторана
+
+		.personal-form__form(x-data="{edit:false}" )
+			form.form-block(:class="edit && 'edit'")
+				.form-block__fields
+
+
+					+input({
+						fg_mod: 'form-group--margin',
+						label_mod: 'form-control-label--small',
+						label: 'Адрес компании компании',
+						type: 'text',
+						placeholder: false,
+						required: true,
+						pattern: false,
+						validation: {
+							message: 'Обязательное поле',
+							regexp: 'Неверный формат',
+							emailaddress: ' ',
+							identical: false
+						}
+					})(value="Кирова 27 А")
+					+input({
+						fg_mod: 'form-group--margin',
+						label_mod: 'form-control-label--small',
+						label: 'Получатель товара',
+						type: 'text',
+						placeholder: false,
+						required: false,
+						pattern: false,
+						validation: {
+							message: 'Обязательное поле',
+							regexp: 'Неверный формат',
+							emailaddress: ' ',
+							identical: false
+						}
+					})(value="Иванов Иван ")
+
+					+input({
+					fg_mod: 'form-group--margin',
+					label_mod: 'form-control-label--small',
+					label: 'Номер телефона',
+					type: 'tel',
+					placeholder: false,
+					required: false,
+					pattern: false,
+					validation: {
+						message: 'Обязательное поле',
+						regexp: 'Неверный формат',
+						emailaddress: ' ',
+						identical: false
+					}
+						})(value="+375 (29) 12-34-567")
+
+
+				.form-block__footer
+					.form-edit(x-cloak x-show="edit")
+						.btn.btn--nav(@click="edit=false")
+							span Отмена
+						button(type="submit").btn.btn--cart
+							span Сохранить данные
+					.btn.btn--nav(x-cloak  x-show="!edit" @click="edit=true")
+						span Редактировать
+
+	.personal-form
+		.personal-form__header
+			.personal-form__title.h2 Добавление нового адреса
+
+		.personal-form__form(x-data="{edit:false}" )
+			form.form-block(:class="edit && 'edit'")
+				.form-block__fields
+
+
+					+input({
+						fg_mod: 'form-group--margin',
+						label_mod: 'form-control-label--small',
+						label: 'Название места доставки',
+						type: 'text',
+						placeholder: 'Например, офис',
+						required: true,
+						pattern: false,
+						validation: {
+							message: 'Обязательное поле',
+							regexp: 'Неверный формат',
+							emailaddress: ' ',
+							identical: false
+						}
+					})
+					+input({
+						fg_mod: 'form-group--margin',
+						label_mod: 'form-control-label--small',
+						label: 'Получатель товара',
+						type: 'text',
+						placeholder: false,
+						required: false,
+						pattern: false,
+						validation: {
+							message: 'Обязательное поле',
+							regexp: 'Неверный формат',
+							emailaddress: ' ',
+							identical: false
+						}
+					})(value="Тикоцкого 27")
+					+input({
+						fg_mod: 'form-group--margin',
+						label_mod: 'form-control-label--small',
+						label: 'Получатель товара',
+						type: 'text',
+						placeholder: 'Введите имя ',
+						required: false,
+						pattern: false,
+						validation: {
+							message: 'Обязательное поле',
+							regexp: 'Неверный формат',
+							emailaddress: ' ',
+							identical: false
+						}
+					})
+
+					+input({
+					fg_mod: 'form-group--margin',
+					label_mod: 'form-control-label--small',
+					label: 'Номер телефона',
+					type: 'tel',
+					placeholder: false,
+					required: false,
+					pattern: false,
+					validation: {
+						message: 'Обязательное поле',
+						regexp: 'Неверный формат',
+						emailaddress: ' ',
+						identical: false
+					}
+						})(value="+375 (29) 12-34-567")
+
+
+				.form-block__footer
+					.form-edit(x-cloak x-show="edit")
+						.form-edit__checkbox
+							+checkbox({
+								mod: 'form-group--checkbox',
+								label: 'Сделать основным'
+							})
+						.btn.btn--nav(@click="edit=false")
+							span Отмена
+						button(type="submit").btn.btn--cart
+							span Сохранить данные
+					.btn.btn--nav(x-cloak  x-show="!edit" @click="edit=true")
+						span Редактировать
+
+
+
+	.personal-form
+		.personal-form__header
+			.personal-form__title.h2 Настройки учетной записи
+
+		.personal-form__form(x-data="{edit:false}" )
+			form.form-block(:class="edit && 'edit'")
+				.form-block__fields
+
+
+					+input({
+						fg_mod: 'form-group--margin',
+						label_mod: 'form-control-label--small',
+						label: 'E-mail',
+						type: 'email',
+						placeholder: false,
+						required: true,
+						pattern: false,
+						validation: {
+							message: 'Обязательное поле',
+							regexp: 'Неверный формат',
+							emailaddress: ' ',
+							identical: false
+						}
+					})(value="info@mail.ru")
+					+input({
+						fg_mod: 'form-group--margin',
+						label_mod: 'form-control-label--small',
+						label: 'Получатель товара',
+						type: 'password',
+						placeholder: 'Введите новый пароль',
+						required: false,
+						pattern: false,
+						validation: {
+							message: 'Обязательное поле',
+							regexp: 'Неверный формат',
+							emailaddress: ' ',
+							identical: false
+						}
+					})
+					+input({
+						fg_mod: 'form-group--margin',
+						label_mod: 'form-control-label--small',
+						label: 'Получатель товара',
+						type: 'password',
+						placeholder: 'Повторите новый пароль',
+						required: false,
+						pattern: false,
+						validation: {
+							message: 'Обязательное поле',
+							regexp: 'Неверный формат',
+							emailaddress: ' ',
+							identical: false
+						}
+					})
+					+checkbox({
+						mod: 'form-group--checkbox',
+						label: 'Получать на почту письма о скидочных товарах'
+					})
+
+				.form-block__footer
+					.form-edit(x-cloak x-show="edit")
+						.btn.btn--nav(@click="edit=false")
+							span Отмена
+						button(type="submit").btn.btn--cart
+							span Сохранить данные
+					.btn.btn--nav(x-cloak  x-show="!edit" @click="edit=true")
+						span Редактировать
+
+
+

@@ -1,0 +1,30 @@
++include-style('faq')
+
+.page-line
+	.page-line__tag FAQ
+	h1.page-line__title.h1 Часто задаваемые вопросы
+
+
+
+.faq-list
+	.faq-item(x-data="{expand: false}" :class="{expand}")
+		.faq-item__header(@click="expand = !expand")
+			.faq-item__num 01
+			.faq-item__title Есть ли у вас скидки?
+			.faq-item__toggler
+				+icon('i-close')(style="width:24px;height:24px;")
+
+		.faq-item__body(x-cloak x-tarnsition x-show="expand")
+			p Да, у нас есть ряд скидок: за количество, на товар дня и накопительная для постоянных покупателей. Вы можете подробно изучить их в нашем разделе.
+
+	.faq-item(x-data="{expand: false}" :class="{expand}")
+		.faq-item__header(@click="expand = !expand")
+			.faq-item__num 02
+			.faq-item__title Какие условия бесплатной доставки?
+			.faq-item__toggler
+				+icon('i-close')(style="width:24px;height:24px;")
+
+		.faq-item__body(x-cloak x-tarnsition x-show="expand")
+			p Да, у нас есть ряд скидок: за количество, на товар дня и накопительная для постоянных покупателей. Вы можете подробно изучить их в нашем разделе.
+
+

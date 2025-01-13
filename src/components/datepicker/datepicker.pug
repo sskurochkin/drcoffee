@@ -1,0 +1,24 @@
++include-style('datepicker')
++include-script('datepicker')
+
+.history-datepicker(x-data="datepicker" :class="{'active': isOpen}" @click.outside="isOpen=false")
+	.history-datepicker__title.h2 За период:
+	.history-datepicker__date
+		input.form-control(type="text" @focus="isOpen = true" x-model="date" placeholder="Выберите дату в календаре")
+		.js-datepicker.datepicker-wrap(x-ref="picker")
+		.reset-btn.btn.btn--reset.btn--nav.btn--fw(@click="resetPicker()")
+			span За все время
+	.history-datepicker__result
+		.row
+			.prop Заказов
+			.val 5
+		.row
+			.prop Вес кофе
+			.val    60 кг
+		.row
+			.prop Вес чая
+			.val    0.6 кг
+		.row.total
+			.prop Стоимость
+			.val  8 220 руб
+

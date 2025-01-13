@@ -1,0 +1,46 @@
++include-style('news-list')
+
+-
+	var items = [
+		{
+			img: 'news-1.png',
+			title: 'Кофейни используют ИИ для улучшения работы бариста',
+			btn: 'Заказать услугу'
+		}, {
+			img: 'news-2.png',
+			title: 'Верни мне мой 1999? История о развитии кофейного рынка в цифрах',
+			btn: 'Заказать услугу'
+		},
+		{
+			img: 'news-3.png',
+			title: 'Как выбрать лучший питчер для взбивания молока?',
+			btn: 'Подробнее'
+		},
+
+	]
+
+.news
+	.news-head
+		.news-head__tag Новости
+
+		ul.news-head__nav
+			li.active
+				a(href="").btn.btn--nav.btn--fw
+					span Все темы
+			li
+				a(href="").btn.btn--nav.btn--fw
+					span Кофейные заметки
+			li
+				a(href="").btn.btn--nav.btn--fw
+					span Чайные заметки
+			li
+				a(href="").btn.btn--nav.btn--fw
+					span Новости Roast.by
+
+	.news-list
+		each item in items
+
+			+news-card({
+				title: item.title,
+				img: item.img
+			})

@@ -1,0 +1,51 @@
+@import "src/assets/css/vars_mixins/vars_mixins";
+
+.personal-form {
+	background-color: #fff;
+	border-radius: 4px;
+	padding: 20px;
+	@media (max-width: $sm - 1) {
+		padding: 16px 12px;
+	}
+	&:not(:last-child){
+		margin-bottom: 40px;
+		@media (max-width: $sm - 1) {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+
+		gap: 10px 30px;
+		//flex-wrap: wrap;
+		margin-bottom: 20px;
+		@media (max-width: $xs - 1) {
+			flex-wrap: wrap;
+		}
+	}
+	&__title{
+		white-space: nowrap;
+	}
+	&__info{
+		color: $primary;
+		text-align: right;
+	}
+
+}
+
+.personal-nav{
+	&__info{
+		color: $n3;
+		margin-bottom: 30px;
+		@media (max-width: $sm - 1) {
+			font-size: 13px;
+		}
+		p{
+			&:not(:last-child){
+				margin-bottom: 16px;
+			}
+		}
+	}
+}

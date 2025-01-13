@@ -1,0 +1,59 @@
+-
+	var pages = [
+
+
+		{name: 'Кофе', link: 'index'},
+		{name: 'Чай', link: 'tea'},
+
+		{name: ' ', link: 'tea'},
+		{name: 'Аксессуары', link: 'device'},
+
+		{name: 'Корзина', link: 'cart'},
+		{name: 'Новости - список', link: 'news-list'},
+		{name: 'Новость отдельная', link: 'news-article'},
+
+
+		{name: 'ЛК', link: 'personal'},
+		{name: 'Заказы', link: 'history'},
+		// {name: 'ЛК-подписки', link: 'personal-mail'},
+		// {name: 'ЛК-кофе', link: 'personal-subs'},
+		// {name: 'Товар 2', link: 'product--single-img'},
+		// {name: 'Сравнение товаров', link: 'compare'},
+
+
+		{name: 'Вопрос-ответ', link: 'faq'},
+		{name: 'Регистрация', link: 'reg'},
+
+		// {name: 'Страница поиска', link: 'search-page'},
+		// {name: 'Авторизация', link: 'auth'},
+		// {name: 'Регистрация', link: 'registration'},
+		// {name: 'Восстановление пароля', link: 'password-repare'},
+
+		// {name: 'Select', link: 'select'},
+	]
+
+-
+	var colors = [
+		{name: '$light-800', number: '#999'},
+	]
+
++include-style('pages-viget')
+
+
+.pages-viget(x-data="{ isPagesVigetOpen: false }" @click.away="isPagesVigetOpen = false" :class="isPagesVigetOpen ? 'open' : ''")
+	.pages-viget__inner
+		ul.pages-viget__nav
+			each item in pages
+				li
+					a(href= '/html/' + item.link + '.html')= item.name
+		ul.pages-viget__colors
+			li.name.main $f-main: 'Inter' 400 500 600 700
+			each color in colors
+				li
+					span(style=`background:${color.number}`)
+					div
+						div.name=color.name
+						div.number=color.number
+
+	.pages-viget__btn(@click="isPagesVigetOpen = ! isPagesVigetOpen")
+		.media-pointer

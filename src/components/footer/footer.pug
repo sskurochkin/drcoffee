@@ -1,0 +1,55 @@
++include-style('footer')
+
+
+footer.footer
+	.container
+		.footer__inner
+			.footer__copy
+				.footer__copy-title.t2 Doctor coffee®
+				.footer__copy-text © 2015 — 2024. Использование любых материалов возможно только при условии активной гиперссылки на doctorcoffee.by. Все авторские права защищены
+				a(href="#").alt.footer__copy-link Политика обработки персональных данных
+				.footer__social.desktop
+					+social()
+			.footer__menu
+				.footer__item
+					.footer__item-title.h3 Разделы
+
+					nav.footer-menu
+						ul.footer-menu__list
+							li.footer-menu__item
+								a(href='#').footer-menu__link
+									span О нас
+							li.footer-menu__item.active
+								a(href='#').footer-menu__link
+									span Ремонт
+							li.footer-menu__item
+								a(href='#').footer-menu__link
+									span Цены
+							li.footer-menu__item
+								a(href='#').footer-menu__link
+									span Статьи
+							li.footer-menu__item
+								a(href='#').footer-menu__link
+									span Контакты
+
+				.footer__item
+					.footer__item-title.h3 время работы
+					.footer__item-body
+						.footer-time
+							.prop Пн-Пт:
+							.val 8:00-19:00
+						.footer-time
+							.prop Пн-Пт:
+							.val 8:00-19:00
+						.footer-time
+							.prop Пн-Пт:
+							.val 8:00-19:00
+
+				.footer__item
+					.footer__item-title.h3 Контакты
+					.footer__item-body
+					.footer__social.mobile
+					.footer__btn.btn.btn--primary(data-target="modal-form" data-toggle="modal")
+						span заказать ремонт
+
+

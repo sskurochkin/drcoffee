@@ -1,0 +1,72 @@
+@import "src/assets/css/vars_mixins/vars_mixins";
+
+.footer{
+	position: relative;
+	margin-top: 8rem;
+	padding: 6rem 0;
+	background-color: $n5;
+	color: $n2;
+
+	&__inner{
+		display: grid;
+		grid-template-columns: 2fr 3fr;
+		justify-content: space-between;
+		gap: 8rem;
+	}
+
+	&__copy{
+		display: flex;
+		flex-direction: column;
+		gap: 1.6rem;
+		&-title{
+			color: #ffffff;
+		}
+		&-link{
+			color: $n2;
+		}
+	}
+
+	&__menu{
+		display: flex;
+		justify-content: space-between;
+	}
+	&__item{
+		flex-direction: column;
+		display: flex;
+		gap: 1.6rem;
+		&-title{
+			text-transform: uppercase;
+		}
+		&-body{
+			flex-direction: column;
+			display: flex;
+			gap: .8rem;
+		}
+	}
+	&-menu{
+		&__list{
+			display: flex;
+			flex-direction: column;
+			gap: .8rem;
+		}
+		&__item{
+			&.active{
+				.footer-menu__link{
+					color: $primary;
+					pointer-events: none;
+				}
+			}
+		}
+		&__link{
+			color: $n2;
+		}
+	}
+	&-time{
+		display: flex;
+		gap: .8rem;
+		.val{
+			color: #fff;
+		}
+	}
+
+}

@@ -1,0 +1,63 @@
++include-script('header')
+
+//header.header
+header.header
+	.container
+		.header__inner
+			.header__left
+				a(href="#").header__logo
+					img(loading="lazy" src=SITE_TEMPLATE_PATH + 'images/logo.png')
+
+			.header__right
+				.header__top
+					.header__top-location
+						+icon('i-location')(style="width:2.4rem;height:2.4rem;")
+						span г. Минск, ул. Кольцова, д. 3
+					a(href="#").header__top-phone
+						+icon('i-phone')(style="width:2.4rem;height:2.4rem;")
+						span +375 (17) 388-03-06 
+
+				.header__bottom
+					nav.header__menu
+						ul.header__links
+							li.header__links-item.active
+								a(href="#").header-link
+									span О нас
+
+							li.header__links-item
+								a(href="#").header-link
+									span Ремонт
+
+							li.header__links-item
+								a(href="#").header-link
+									span Цены
+
+							li.header__links-item
+								a(href="#").header-link
+									span Статьи
+
+							li.header__links-item
+								a(href="#").header-link
+									span Контакты
+
+
+					.header__btn.btn.btn--black(data-target="modal-form" data-toggle="modal")
+						span заказать ремонт
+
+					.burger(@click="isMobileMenuOpen = true")
+						span
+						span
+						span
+						span
+	.mobile-menu(:class="isMobileMenuOpen && 'active'")
+
+
+			.mobile-menu__close(@click="isMobileMenuOpen = false")
+				+icon('i-close')(style="width:18px;height:18px;")
+
+
+
+	.overlay(@click="isMobileMenuOpen = false"
+		:class="isMobileMenuOpen && 'visible'")
+
+

@@ -1,0 +1,67 @@
+@import "src/assets/css/vars_mixins/vars_mixins";
+
+.btn {
+	background-color: transparent;
+	margin: 0;
+	border: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 4.4rem;
+	padding: 0 3.2rem;
+	gap: 8px;
+	font-size: 1.6rem;
+	border-radius: 1000px;
+	text-transform: uppercase;
+	transition: all ease .3s;
+	white-space: nowrap;
+
+	@media (max-width: $sm - 1) {
+		height: 40px;
+		font-size: 14px;
+	}
+	&--primary{
+		background-color: $primary;
+		color: #ffffff;
+		&:hover {
+			@media (hover: hover) {
+				cursor: pointer;
+				background-color: $primary-hover;
+			}
+		}
+	}
+
+	&--lg{
+		height: 7rem;
+		font-size: 2.4rem;
+	}
+	&--black{
+		background-color: $n5;
+		color: #ffffff;
+		&:hover {
+			@media (hover: hover) {
+				cursor: pointer;
+				background-color: $primary;
+			}
+		}
+	}
+
+
+	&--fw{
+		width: 100%;
+	}
+
+	&--link{
+		height: 4.2rem;
+		border: 2px solid $n2;
+		text-transform: none;
+		font-size: 1.8rem;
+		&:hover {
+			@media (hover: hover) {
+				cursor: pointer;
+				border-color: $primary;
+			}
+		}
+	}
+}
+

@@ -1,0 +1,29 @@
+
+@font-face {
+  font-family: Fira;
+  src: url('/html/fonts/subset-FiraSansCondensed-Medium.woff2') format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: Fira;
+  font-style: normal;
+  font-weight: 600;
+  src: url('/html/fonts/subset-FiraSansCondensed-SemiBold.woff2') format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: Fira;
+  font-style: normal;
+  font-weight: 700;
+  src: url('/html/fonts/subset-FiraSansCondensed-Bold.woff2') format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: Fira;
+  font-style: normal;
+  font-weight: 900;
+  src: url('/html/fonts/subset-FiraSansCondensed-ExtraBold.woff2') format("woff2");
+  font-display: swap;
+}

@@ -1,0 +1,57 @@
+.product-gallery
+	.product-gallery__inner
+		.product-gallery__sliders-wrap
+			//-.product-gallery__badges
+				+lazy-img({
+					link: false,
+					wrap_mod: 'product-block__badge-wrap',
+					img_mod: '.product-block__badge__icon',
+					img: `i-present.svg`,
+				})
+				+lazy-img({
+					link: false,
+					wrap_mod: 'product-block__badge-wrap',
+					img_mod: '.product-block__badge__icon',
+					img: `i-good.svg`,
+				})
+				+lazy-img({
+					link: false,
+					wrap_mod: 'product-block__badge-wrap',
+					img_mod: '.product-block__badge__icon',
+					img: `i-sale.svg`,
+				})
+				+lazy-img({
+					link: false,
+					wrap_mod: 'product-block__badge-wrap',
+					img_mod: '.product-block__badge__icon',
+					img: `i-cartt.svg`,
+				})
+				+lazy-img({
+					link: true,
+					href: '#tabs',
+					wrap_mod: 'product-block__badge-wrap',
+					img_mod: '.product-block__badge__icon',
+					img: `i-review.svg`,
+				})(@click="activeTab = 'reviews'")
+			.product-gallery__sliders
+				.splide#main-carousel
+					.splide__track
+						ul.splide__list
+							li.splide__slide
+								.splide__slide-img-wrap
+									+lazy-img-splide({
+										src: `product-detail.png`,
+										alt: 'main'
+									})
+							li.splide__slide
+								.splide__slide-img-wrap
+									+lazy-img-splide({
+										src: `product-gallery-main-2.jpg`,
+										alt: 'main'
+									})
+							li.splide__slide
+								.splide__slide-img-wrap
+									+lazy-img-splide({
+										src: `product-gallery-main-2.jpg`,
+										alt: 'main'
+									})

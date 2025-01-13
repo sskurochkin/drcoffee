@@ -1,0 +1,99 @@
+@import "src/assets/css/vars_mixins/vars_mixins";
+
+.main{
+	position: relative;
+}
+.reg-bg{
+	position: absolute;
+	inset: 0;
+	margin-bottom: -70px;
+	@media (max-width: $md - 1) {
+		margin-bottom: -40px;
+		display: none;
+
+	}
+	@media (max-width: $xs - 1) {
+		display: none;
+		margin-bottom: -20px;
+	}
+	.lazy-img-wrap{
+		position: absolute;
+		inset: 0;
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&:before{
+		content: '';
+		position: absolute;
+		inset: 0;
+		z-index: 2;
+		background-color: rgba(0,0,0, 0.4);
+	}
+}
+.reg{
+	@media (max-width: $md - 1) {
+		margin: -40px -12px 0;
+	}
+}
+
+.reg-form{
+	position: relative;
+	background-color: #fff;
+	max-width: 1200px;
+	margin: 60px auto 0;
+	width: 100%;
+	z-index: 3;
+	padding: 48px;
+	border-radius: 4px;
+	@media (max-width: $lg - 1) {
+		padding: 30px 16px;
+		margin-top: 30px;
+	}
+	@media (max-width: $md - 1) {
+		margin-top: 0;
+	}
+
+	&__title{
+		font-weight: 600;
+		margin-bottom: 40px;
+		text-align: center;
+		font-size: 23px;
+		@media (max-width: $md - 1) {
+			margin-bottom: 20px;
+			font-size: 18px;
+		}
+	}
+
+
+	.form-grid{
+		column-count: 2;
+		column-gap: 40px;
+		@media (max-width: $md - 1) {
+			column-count: auto;
+		}
+	}
+	.form-section{
+		margin-bottom: 40px;
+		break-inside: avoid-column;
+		page-break-inside: avoid;
+		@media (max-width: $md - 1) {
+			margin-bottom: 20px;
+		}
+		&__title{
+			font-size: 18px;
+			font-weight: 600;
+			margin-bottom: 16px;
+			@media (max-width: $md - 1) {
+				margin-bottom: 12px;
+				font-size: 16px;
+			}
+		}
+	}
+
+	.form-block__footer{
+		flex-direction: column;
+	}
+}

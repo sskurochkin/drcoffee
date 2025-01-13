@@ -1,0 +1,64 @@
++modal({
+    id: 'modal-auth',
+    mod: 'modal-narrow modal-auth',
+    title: 'Вход в личный кабинет',
+    header: true
+})
+	.modal-alert.modal-alert--error
+		+icon('i-alert')(style="width:24px;height:24px;")
+		p Неверные данные. Исправьте выделенные поля и повторите попытку.
+	form.form-block.edit(x-data="{showPass: false}")
+		+input({
+            label: 'Телефон',
+            fg_mod: 'form-group--margin',
+            label_mod: 'form-control-label--small',
+            type: 'tel',
+            name: false,
+            small: false,
+            placeholder: '+375 (__) ___-__-__',
+            required: true,
+            pattern: 'phone',
+            validation: {
+                message: 'Заполните поле',
+                regexp: 'Неверный формат',
+                emailaddress: ' ',
+                identical: false
+            }
+        })
+
+		+input({
+            fg_mod: 'form-group--margin',
+            label_mod: 'form-control-label--small',
+            xType: "showPass ? 'text' : 'password'",
+            label: 'Пароль',
+            type: 'text',
+            placeholder: false,
+            required: true,
+            pattern: false,
+            validation: {
+                message: 'Обязательное поле',
+                regexp: 'Неверный формат',
+                emailaddress: ' ',
+                identical: false
+            }
+        })
+			.show-pass(@click="showPass = !showPass" x-cloak)
+				+icon('i-show-pass')(style="width:20px; height:20px")(x-show="!showPass")
+				+icon('i-hide-pass')(style="width:20px; height:20px")(x-show="showPass")
+		.form-block__row
+			.forgot(data-toggle="modal" data-dismiss="modal"  data-target="#modal-password") Забыли пароль?
+		.form-block__footer
+			.policy-block
+				+checkbox({
+                    mod: 'form-group--checkbox',
+                    label: 'Я согласен на <a href="#"> обработку персональных данных</a>',
+                    value: '',
+                    name: 'policy',
+                    required: true,
+                })(checked)
+
+
+			button(type="submit").btn.btn--fw.btn--cart Войти
+		.form-block__auth
+			p Нет аккаунта?&nbsp;
+			.forgot(data-toggle="modal" data-dismiss="modal"  data-target="#modal-reg") Зарегистрироваться

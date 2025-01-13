@@ -1,0 +1,135 @@
+@import "src/assets/css/vars_mixins/vars_mixins";
+
+.no-transition * {
+	transition: none !important;
+}
+
+html {
+	box-sizing: border-box;
+	font-style: normal;
+	line-height: 1.4;
+	scroll-behavior: smooth;
+	font-size: 10px;
+	@media (max-width: $lg - 1) {
+		font-size: 0.7vw;
+	}
+}
+
+body {
+	font-size: 1.8rem;
+	background-color: $bg;
+	font-weight: 500;
+	font-family: "Fira", Arial, Verdana, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	max-width: 100vw;
+	min-height: 100vh;
+}
+
+.main {
+	flex: 1 0 auto;
+}
+
+
+.hidden {
+	display: none !important;
+}
+
+.icon {
+	flex-shrink: 0;
+}
+
+svg {
+	max-width: 100%;
+}
+
+img {
+	max-width: 100%;
+	object-fit: contain;
+}
+
+button {
+	font-family: inherit;
+}
+
+a {
+	text-decoration: none;
+
+}
+
+
+a:not[class] {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	text-decoration: underline;
+	color: $primary;
+
+	&:hover {
+		@media (hover: hover) {
+			cursor: pointer;
+			color: $primary-hover;
+			fill: $primary-hover;
+		}
+	}
+}
+
+input {
+	font-family: inherit;
+
+	&::placeholder {
+		font-family: inherit;
+	}
+}
+
+
+.h1 {
+	font-size: 4.0rem;
+	font-weight: 900;
+	line-height: 1.2;
+	text-transform: uppercase;
+}
+
+.h2 {
+	font-size: 2.0rem;
+	font-weight: 900;
+	line-height: 1.2;
+	text-transform: uppercase;
+}
+
+.h3 {
+	font-size: 1.8rem;
+	font-weight: 900;
+	line-height: 1.22;
+	text-transform: uppercase;
+}
+
+.h4 {
+	font-size: 1.6rem;
+	font-weight: 900;
+	line-height: 1.25;
+	text-transform: uppercase;
+}
+
+.h5 {
+	font-size: 1.4rem;
+	font-weight: 900;
+	line-height: 1.21;
+	text-transform: uppercase;
+}
+
+.t2 {
+	font-weight: 700;
+	font-size: 2.4rem;
+	line-height: 1.25;
+}

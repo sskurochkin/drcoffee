@@ -1,0 +1,64 @@
+@import "src/assets/css/vars_mixins/vars_mixins";
+
+.news {
+	&-head{
+		display: grid;
+		grid-template-columns: 40% auto;
+		gap: 50px;
+		align-items: center;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+		border-bottom: 1px solid $n2;
+		@media (max-width: $md - 1) {
+			gap: 20px;
+		}
+		@media (max-width: $sm - 1) {
+			grid-template-columns: 100%;
+
+		}
+
+		&__tag{
+			color: $n3;
+			font-size: 14px;
+			@media (max-width: $sm - 1) {
+				display: none;
+			}
+		}
+
+		&__nav {
+
+			display: flex;
+			gap: 12px;
+			@media (max-width: $sm - 1) {
+				overflow: auto;
+				margin: 0 -12px;
+				padding: 0 12px;
+			}
+
+			li.active {
+				.btn {
+					background-color: $mc;
+					border-color: $mc;
+					pointer-events: none;
+					color: #ffffff;
+				}
+			}
+
+		}
+	}
+
+}
+
+.news-list {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	@media (max-width: $sm - 1) {
+		gap: 16px;
+	}
+
+}
+
+
+
+

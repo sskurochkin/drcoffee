@@ -1,0 +1,85 @@
+@import "src/assets/css/vars_mixins/vars_mixins";
+
+.faq{
+
+	&-list{
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	&-item{
+		padding-bottom: 30px;
+		border-bottom: 1px solid $n2;
+		@media (max-width: $md - 1) {
+			padding-bottom: 24px;
+		}
+		&.expand{
+			.faq-item__header{
+				color: $mc;
+			}
+			.faq-item__toggler{
+				.icon{
+					fill: $mc;
+					transform: rotate(90deg);
+				}
+			}
+		}
+
+		&__header{
+			display: grid;
+			grid-template-columns:	30% 1fr;
+			gap: 30px;
+			position: relative;
+			font-size: 19px;
+			font-weight: 600;
+			color: $n3;
+			transition: all ease .3s;
+
+			@media (max-width: $lg - 1) {
+				grid-template-columns: 10% 1fr;
+			}
+			@media (max-width: $md - 1) {
+				font-size: 16px;
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
+			@media (min-width: $sm) {
+				cursor: pointer;
+				&:hover {
+
+				}
+
+			}
+		}
+		&__title{
+			padding-right: 50px;
+		}
+		&__toggler{
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			margin: auto 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			right: 0;
+			@media (max-width: $md - 1) {
+				margin-left: auto;
+			}
+			.icon{
+				transition: all ease .3s;
+				transform: rotate(45deg);
+				fill: $n3;
+			}
+		}
+
+		&__body{
+			margin-top: 16px;
+			color: $n3;
+		}
+	}
+
+
+}
