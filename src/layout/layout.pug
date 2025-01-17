@@ -42,22 +42,17 @@ html(lang='ru-RU')
 		x-data="{ isMobileMenuOpen: false }"
 		:class="isMobileMenuOpen && 'overflow'"
 	)
-		//-script.
-			if (localStorage.getItem('themeDark') === 'true') {
-				document.body.classList.add('theme-dark');
-			} else {
-				document.body.classList.remove('theme-dark');
-			}
+
 
 		.wrapper
-			include ../components/header/header
+			//include ../components/header/header
 
 			block premain
 
 			main.main
 				block main
 
-			include ../components/footer/footer
+			//include ../components/footer/footer
 
 		.modals-list.js-modals-list
 

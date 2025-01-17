@@ -7,11 +7,14 @@
 html {
 	box-sizing: border-box;
 	font-style: normal;
-	line-height: 1.4;
+	line-height: 1.22;
 	scroll-behavior: smooth;
 	font-size: 10px;
 	@media (max-width: $lg - 1) {
 		font-size: 0.7vw;
+	}
+	@media (max-width: $md - 1) {
+		font-size: 6.5px;
 	}
 }
 
@@ -20,6 +23,9 @@ body {
 	background-color: $bg;
 	font-weight: 500;
 	font-family: "Fira", Arial, Verdana, sans-serif;
+	@media (max-width: $md - 1) {
+		font-size: 14px;
+	}
 }
 
 *,
@@ -92,12 +98,29 @@ input {
 	}
 }
 
+.mb-6{
+	margin-bottom: 6rem;
+}
+
+.section-margin{
+	margin-top: 16rem;
+	@media (max-width: $md - 1) {
+		margin-top: 80px;
+	}
+}
+
 
 .h1 {
 	font-size: 4.0rem;
 	font-weight: 900;
 	line-height: 1.2;
 	text-transform: uppercase;
+	@media (max-width: $md - 1) {
+		font-size: 28px;
+	}
+	@media (max-width: $xs - 1) {
+		font-size: 20px;
+	}
 }
 
 .h2 {
@@ -131,5 +154,13 @@ input {
 .t2 {
 	font-weight: 700;
 	font-size: 2.4rem;
+	line-height: 1.25;
+	@media (max-width: $md - 1) {
+		font-size: 16px;
+	}
+}
+.t3 {
+	font-weight: 600;
+	font-size: 2.2rem;
 	line-height: 1.25;
 }

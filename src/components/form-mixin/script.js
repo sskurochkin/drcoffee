@@ -1,15 +1,15 @@
 window.addEventListener('load', function () {
-    // TODO
-    // console.log('st')
-    // let stars = document.querySelectorAll('.radio-rate');
-    //
-    // stars.forEach(star => {
-    //     star.addEventListener('mouseenter', function (ev){
-    //         console.log(ev.target)
-    //     })
-    // })
+    const fields = document.querySelectorAll('.form-control')
 
+	fields.forEach(el=>el.addEventListener('blur', ()=>{
 
+		if(el.value.length){
+			el.classList.add('dirty')
+		}else{
+			el.classList.remove('dirty')
+		}
+
+	}))
 })
 
 document.addEventListener('alpine:init', () => {

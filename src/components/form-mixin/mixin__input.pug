@@ -1,15 +1,13 @@
 mixin input(args = {})
 	+include-style('form-mixin')
+	+include-script('form-mixin')
 
 	- var id = args.id || Math.floor(Math.random() * 9999999999);
 
 
 	if(args.pass)
 		.form-group(class= args.mod)(x-data="{showPass: false}")
-			if(args.label)
-				label.form-control-label(class=args.label_mod for= 'ID' + id)= args.label
-					if (args.required)
-						span.label-required *
+
 			input.form-control(
 				type= args.type || 'text',
 				id= 'ID' + id,
@@ -20,13 +18,14 @@ mixin input(args = {})
 				readonly=args.readonly,
 				:type= args.xType
 				)&attributes(attributes)
-			block
-	else
-		.form-group(class= args.mod)
 			if(args.label)
 				label.form-control-label(class=args.label_mod for= 'ID' + id)= args.label
 					if (args.required)
 						span.label-required *
+			block
+	else
+		.form-group(class= args.mod)
+
 			input.form-control(
 				type= args.type || 'text',
 				id= 'ID' + id,
@@ -37,4 +36,8 @@ mixin input(args = {})
 				readonly=args.readonly,
 				:type= args.xType
 			)&attributes(attributes)
+			if(args.label)
+				label.form-control-label(class=args.label_mod for= 'ID' + id)= args.label
+					if (args.required)
+						span.label-required *
 			block

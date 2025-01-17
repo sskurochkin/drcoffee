@@ -1,0 +1,10 @@
+mixin brand-card(args={})
+	+include-style('mixin__brand-card')
+	.brand-card
+		.brand-card__img
+			img(loading="lazy" src=SITE_TEMPLATE_PATH + args.img)
+		.brand-card__title.t3=args.title
+		.brand-card__text=args.text
+		.brand-card__link
+			a(href="#").btn.btn--black.btn--fw
+				span Подробнее

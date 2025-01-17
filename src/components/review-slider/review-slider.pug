@@ -1,0 +1,33 @@
++include-style('review-slider')
++include-script('review-slider')
+
+mixin review-card(args={})
+
+	.review-card
+		.review-card__img
+			img(loading="lazy" src=SITE_TEMPLATE_PATH + args.img)
+		.review-card__title.t3=args.title
+		.review-card__text=args.text
+		.review-card__link
+			a(href="#").btn.btn--black.btn--fw
+				span Подробнее
+
+
+.index-review.section-margin
+	+page-header({
+		title: 'отзывы клиентов',
+		link: 'Все отзывы'
+	})
+	.container
+		+splide({}).js-slider-partner.partner-slider
+			each i in [1,2,3]
+				li.splide__slide
+					+review-card({
+						title: 'Maxim Tutunov',
+						text: 'Посещение этого сервиса оставило самые приятные впечатления. Отлично налажены все бизнес - процессы - от приемки до выдачи заказа, о ходе выполнения информируют смс.'
+					})
+				li.splide__slide
+					+review-card({
+						title: 'Mihail Rukavishnikov',
+						text: 'Обратился с поломкой стимера в эспрессо-кофеварке Lelit. Сделали все за 2 дня. Доволен, все теперь отлично работает. Обратился с поломкой стимера в эспрессо-кофеварке Lelit. Сделали все за 2 дня. Доволен, все теперь отлично работает. апппппппппппппОбратился с поломкой стимера в эспрессо-кофеварке Lelit. Сделали все за 2 дня. Доволен, все теперь отлично работает. Обратился с поломкой стимера в эспрессо-кофеварке Lelit. Сделали все за 2 дня. Доволен, все теперь отлично работает. аппппппппппппп'
+					})

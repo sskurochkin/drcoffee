@@ -1,0 +1,22 @@
+@import "src/assets/css/vars_mixins/vars_mixins";
+
+.index-brand{
+	&__grid{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		gap: 4rem 2rem;
+		@media (max-width: $md - 1) {
+			display: flex;
+			gap: 12px;
+			overflow: auto;
+			padding: 0 16px 6px;
+			margin: 0 -16px;
+		}
+	}
+
+	@media (max-width: $md - 1) {
+		.title{
+			max-width: 200px;
+		}
+	}
+}

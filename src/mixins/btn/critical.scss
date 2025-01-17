@@ -34,6 +34,10 @@
 	&--lg{
 		height: 7rem;
 		font-size: 2.4rem;
+		@media (max-width: $md - 1) {
+			height: 42px;
+			font-size: 14px;
+		}
 	}
 	&--black{
 		background-color: $n5;
@@ -56,6 +60,7 @@
 		border: 2px solid $n2;
 		text-transform: none;
 		font-size: 1.8rem;
+		color: $primary;
 		&:hover {
 			@media (hover: hover) {
 				cursor: pointer;

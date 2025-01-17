@@ -1,0 +1,64 @@
+@import "src/assets/css/vars_mixins/vars_mixins";
+
+.team__grid{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 2rem;
+	@media (max-width: $md - 1) {
+		gap: 20px;
+		display: flex;
+		flex-wrap: nowrap;
+		overflow: auto;
+		padding: 0 16px 6px;
+		margin: 0 -16px;
+	}
+}
+
+.team-card{
+	border-radius: 1.2rem;
+	padding: 0 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: .8rem;
+	max-width: 20rem;
+	@media (max-width: $md - 1) {
+		min-width: 130px;
+		flex-shrink: 0;
+		padding: 0;
+		gap: 6px;
+	}
+	&__img{
+		height: 20rem;
+		width: 20rem;
+		border-radius: 50%;
+		border: 2px solid $n2;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		overflow: hidden;
+		@media (max-width: $md - 1) {
+			height: 130px;
+			width: 130px;
+		}
+		img{
+			position: absolute;
+			inset: 0;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	&__title{
+		color: $mc;
+		margin-top: .8rem;
+		@media (max-width: $md - 1) {
+			margin-top: 6px;
+		}
+	}
+	&__text{
+
+		color: $n4;
+	}
+
+}

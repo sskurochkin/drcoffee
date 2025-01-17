@@ -1,0 +1,60 @@
+@import "src/assets/css/vars_mixins/vars_mixins";
+
+.brand-card{
+	background-color: #fff;
+	border-radius: 1.2rem;
+	padding: 2.4rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.6rem;
+	@media (max-width: $md - 1) {
+		border-radius: 12px;
+		padding: 16px;
+		gap: 12px;
+		width: 240px;
+		flex-shrink: 0;
+	}
+	&__img{
+		height: 10rem;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@media (max-width: $md - 1) {
+			height: 50px;
+		}
+		img{
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+	&__title{
+		height: 5.3rem;
+		-webkit-line-clamp: 2;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		color: $mc;
+		@media (max-width: $md - 1) {
+			//height: 40px;
+			height: auto;
+		}
+	}
+	&__text{
+		height: 13.5rem;
+		-webkit-line-clamp: 6;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		color: $text;
+		@media (max-width: $md - 1) {
+			height: 104px;
+		}
+	}
+	&__link{
+		margin-top: .8rem;
+		@media (max-width: $md - 1) {
+			margin-top: 12px;
+		}
+	}
+}

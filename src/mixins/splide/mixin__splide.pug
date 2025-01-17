@@ -1,9 +1,12 @@
-mixin splide(args={})
-    section.splide.js-splide(aria-label="splide basic html example" class=args.mod)
-        .splide__track
-            ul.splide__list
-                block
+mixin splide(args= {})
 
-mixin splide-slide(args={})
-    li.splide__slide
-        block
+	.splide&attributes(attributes)
+		.splide__track
+			ul.splide__list
+				block
+		.splide__arrows
+			button.splide__arrow.splide__arrow--prev
+				+icon('i-arrow-down')(style="width:2.4rem; height:2.4rem")
+
+			button.splide__arrow.splide__arrow--next
+				+icon('i-arrow-down')(style="width:2.4rem; height:2.4rem")

@@ -1,0 +1,42 @@
++include-style('team')
+
+mixin team-card(args={})
+	.team-card
+		.team-card__img
+			img(loading="lazy" src=SITE_TEMPLATE_PATH + 'images/team.png')
+		.team-card__title.t2=args.title
+		.team-card__text=args.text
+
+
+.team.section-margin
+	+page-header({
+		title: 'Команда специалистов',
+	})
+	.container
+		.team__grid
+			+team-card({
+				title: 'Иванов Иван Иванович',
+				img: 'images/utp-1.svg',
+				text: 'индустрии не менее 5 лет'
+			})
+			
+			+team-card({
+				title: 'Иванов Иван Иванович',
+				img: 'images/utp-2.svg',
+				text: ' дилерского уровня'
+			})
+
+			+team-card({
+				title: 'Иванов Иван Иванович',
+				img: 'images/utp-3.svg',
+				text: 'Наш выбор — политика скидок'
+			})
+
+			+team-card({
+				title: 'Иванов Иван Иванович',
+				img: 'images/utp-4.svg',
+				text: 'грамотное распределение труда'
+			})
+
+
+

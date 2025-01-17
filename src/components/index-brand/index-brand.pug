@@ -1,0 +1,21 @@
++include-style('index-brand')
+
+
+include ../vars/search
+.index-brand.section-margin
+	+page-header({
+		title: 'ремонтируем БРЕНДЫ',
+		link: 'Все бренды '
+	})
+	.container
+		.index-brand__grid
+			each i in brands
+				+brand-card({
+					title: i.title,
+					text: i.text,
+					img: i.img
+				})
+
+
+
+

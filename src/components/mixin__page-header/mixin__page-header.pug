@@ -1,0 +1,19 @@
+mixin page-header(args={})
+	+include-style('mixin__page-header')
+	.page-header(class=args.mod)(сlass=args.h1 ? 'mb-6': '')
+		.container
+			if(args.breadcrumb)
+				+breadcrumbs({
+					content2: 'Статьи',
+					href_content2: true,
+					content3: 'Не только арабика и робуста: сорта и виды кофе'
+				})
+
+			.page-header__title
+				if(args.h1)
+					h1.h1.title=args.title
+				else
+					.h1.title=args.title
+					if(args.link)
+						a(href='#').page-header__link.btn.btn--link
+							span=args.link

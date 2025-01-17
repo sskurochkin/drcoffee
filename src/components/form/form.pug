@@ -1,0 +1,51 @@
++include-style('form')
+
+.form.form--black
+	.form__bg
+		img(loading="lazy" src=SITE_TEMPLATE_PATH+'images/bg.png')
+	.form__inner
+		.form__left
+			.form__title.h1 Остались вопросы?
+			.form__subtitle Оставьте заявку, и наши специалисты свяжутся с вами, чтобы ответить на все ваши вопросы!
+		.form__right
+			+input({
+				label: 'Ваше имя',
+				fg_mod: 'form-group--margin',
+				type: 'text',
+				name: false,
+				small: false,
+				placeholder: '',
+				required: true,
+				validation: {
+					message: 'Заполните поле',
+					regexp: 'Неверный формат',
+					emailaddress: ' ',
+					identical: false
+				}
+				})
+			+input({
+				label: 'Телефон',
+				fg_mod: 'form-group--margin',
+				type: 'tel',
+				name: false,
+				small: false,
+				placeholder: '',
+				required: true,
+				pattern: 'phone',
+				validation: {
+					message: 'Заполните поле',
+					regexp: 'Неверный формат',
+					emailaddress: ' ',
+					identical: false
+				}
+			})
+
+			+textarea({
+				fg_mod: 'form-group--margin',
+				label_mod: 'form-control-label--small',
+				label: 'Опишите проблему',
+				required: true,
+			})
+
+			.form__submit
+				button(type="submit").btn.btn--primary.btn--lg.btn--fw заказать ремонт

@@ -11,8 +11,18 @@ block premain
 
 
 block main
-	.container
-
+	+page-header({
+		h1: true,
+		mod: 'page-header--index',
+		breadcrumb: false,
+		title: 'Doctor Coffee — №1 по ремонту кофемашин в Беларуси',
+		link: false
+	})
+	include ../../components/index-brand/index-brand
+	include ../../components/index-utp/index-utp
+	include ../../components/team/team
+	include ../../components/form/page-form
+	include ../../components/review-slider/review-slider
 
 
 

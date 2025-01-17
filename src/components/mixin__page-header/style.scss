@@ -1,0 +1,25 @@
+@import "src/assets/css/vars_mixins/vars_mixins";
+
+.page-header{
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+	@media (max-width: $md - 1) {
+		margin: 20px 0;
+	}
+	&__title{
+		display: flex;
+		justify-content: space-between;
+		gap: 2rem;
+		align-items: center;
+		@media (max-width: $md - 1) {
+			align-items: flex-end;
+		}
+	}
+
+	&--index{
+		.page-header__title{
+			max-width: 80rem;
+		}
+
+	}
+}

@@ -1,0 +1,42 @@
++include-style('index-utp')
+
+mixin utp-card(args={})
+	.utp-card
+		.utp-card__img
+			img(loading="lazy" src=SITE_TEMPLATE_PATH + args.img)
+		.utp-card__title.t2=args.title
+		.utp-card__text=args.text
+
+
+.index-utp.section-margin
+	+page-header({
+		title: 'Наши преимущества',
+	})
+	.container
+		.index-utp__grid
+			+utp-card({
+				title: 'Персонал',
+				img: 'images/utp-1.svg',
+				text: 'У нас работают квалифицированные специалисты со стажем работы в кофейной индустрии не менее 5 лет'
+			})
+			
+			+utp-card({
+				title: 'Оборудование',
+				img: 'images/utp-2.svg',
+				text: 'Все работы производятся с помощью профессиональных инструментов и оборудования дилерского уровня'
+			})
+
+			+utp-card({
+				title: 'Цены',
+				img: 'images/utp-3.svg',
+				text: 'Наш выбор — политика разумных дифференцированных цен. Мы имеем гибкую систему дисконтных карт и сезонных скидок'
+			})
+
+			+utp-card({
+				title: 'Сроки',
+				img: 'images/utp-4.svg',
+				text: 'Все работы производятся максимально быстро, этому способствует грамотное распределение труда и собственная служба доставки'
+			})
+
+
+
