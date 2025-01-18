@@ -16,7 +16,7 @@
 	transition: all ease .3s;
 	white-space: nowrap;
 
-	@media (max-width: $sm - 1) {
+	@media (max-width: $md - 1) {
 		height: 40px;
 		font-size: 14px;
 	}

@@ -1,0 +1,197 @@
+@import "src/assets/css/vars_mixins/vars_mixins";
+
+.index-repair {
+	.page-header__title {
+		text-align: center;
+
+		.accent {
+			color: $primary;
+		}
+	}
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	&__img {
+		position: relative;
+		width: 57rem;
+		height: 67rem;
+		@media (max-width: $sm - 1) {
+			width: 300px;
+			height: 345px;
+		}
+
+		img {
+			position: absolute;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+
+		}
+	}
+
+	&__points {
+		position: absolute;
+		z-index: 2;
+		inset: 0;
+	}
+	&__link{
+		width: 100%;
+		margin-top: 4rem;
+		@media (max-width: $md - 1) {
+			margin-top: 24px;
+		}
+	}
+}
+
+
+.point {
+	position: absolute;
+	z-index: 3;
+
+
+	&:hover {
+
+		.point__body {
+			opacity: 1;
+			visibility: visible;
+			transform: translate(100%, -50%);
+		}
+
+	}
+
+
+	&--left {
+		.point__title {
+			transform: translateX(-100%);
+			left: -2.4rem;
+		}
+
+
+	}
+
+	&--right {
+		@media (max-width: $sm - 1) {
+			.point__body{
+				left: -1.2rem;
+				transform: translate(-98%, -50%);
+			}
+
+
+				&:hover {
+					z-index: 10;
+					.point__body{
+						transform: translate(-100%, -50%);
+					}
+				}
+
+		}
+
+	}
+
+	&__title {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		display: flex;
+		align-items: center;
+		left: 8rem;
+		@media (max-width: $sm - 1) {
+			display: none;
+		}
+	}
+
+	&__head {
+		display: flex;
+		gap: 2.4rem;
+		align-items: center;
+	}
+
+	&__dot {
+		position: relative;
+		width: 5.6rem;
+		height: 5.6rem;
+		border-radius: 50%;
+		background-color: $primary;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_938_921)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.64019 3.15676C7.64019 2.56247 7.87627 1.99253 8.29649 1.57231C8.71671 1.15209 9.28665 0.916016 9.88093 0.916016H12.1217C12.716 0.916016 13.2859 1.15209 13.7061 1.57231C14.1263 1.99253 14.3624 2.56247 14.3624 3.15676V7.63824H18.8439C19.4382 7.63824 20.0081 7.87432 20.4283 8.29454C20.8486 8.71476 21.0846 9.2847 21.0846 9.87898V12.1197C21.0846 12.714 20.8486 13.2839 20.4283 13.7042C20.0081 14.1244 19.4382 14.3605 18.8439 14.3605H14.3624V18.8419C14.3624 19.4362 14.1263 20.0062 13.7061 20.4264C13.2859 20.8466 12.716 21.0827 12.1217 21.0827H9.88093C9.28665 21.0827 8.71671 20.8466 8.29649 20.4264C7.87627 20.0062 7.64019 19.4362 7.64019 18.8419V14.3605H3.15871C2.56443 14.3605 1.99449 14.1244 1.57427 13.7042C1.15405 13.2839 0.917969 12.714 0.917969 12.1197V9.87898C0.917969 9.2847 1.15405 8.71476 1.57427 8.29454C1.99449 7.87432 2.56443 7.63824 3.15871 7.63824H7.64019V3.15676Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_938_921'%3E%3Crect width='22' height='22' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+		transition: all ease .3s;
+		background-size: 2.2rem;
+
+		&:hover {
+
+			//.point__body {
+			//	opacity: 1;
+			//	visibility: visible;
+			//	transform: translate(100%, -50%);
+			//}
+
+			@media (hover: hover) {
+				cursor: pointer;
+				background-size: 2.8rem;
+			}
+		}
+
+	}
+
+
+	&__body {
+		background-color: #fff;
+		border-radius: 1.2rem;
+		padding: 2.4rem;
+		box-shadow: $shadowb;
+		display: flex;
+		flex-direction: column;
+		color: $text;
+		width: 29rem;
+		position: absolute;
+		right: -1.2rem;
+		top: 50%;
+		opacity: 0;
+		visibility: hidden;
+		transition: all ease .3s;
+		transform: translate(98%, -50%);
+		z-index: 4;
+
+		h6 {
+			margin-bottom: 1.6rem;
+			color: $mc;
+		}
+
+		ul {
+			margin-top: .8rem;
+			display: flex;
+			flex-direction: column;
+			gap: .4rem;
+		}
+
+		li {
+			position: relative;
+			padding-left: 1.6rem;
+
+			&:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: .6rem;
+				width: .8rem;
+				height: .8rem;
+				border-radius: 50%;
+				background-color: $primary;
+			}
+		}
+
+		.price {
+			margin-top: 1.6rem;
+			color: $primary;
+			text-align: right;
+		}
+
+
+	}
+}

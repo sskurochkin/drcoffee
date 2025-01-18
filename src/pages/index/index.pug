@@ -18,7 +18,9 @@ block main
 		title: 'Doctor Coffee — №1 по ремонту кофемашин в Беларуси',
 		link: false
 	})
+	include ../../components/index-hero/index-hero
 	include ../../components/index-brand/index-brand
+	include ../../components/index-repair/index-utp
 	include ../../components/index-utp/index-utp
 	include ../../components/team/team
 	include ../../components/form/page-form
@@ -36,3 +38,7 @@ block componentsStyles
 	+style-includer()
 block componentsScripts
 	+componentsScripts-includer()
+block scripts
+
+	// Скрипты для всех страниц
+	script(src="./js/vendor/splide.min.js" defer)

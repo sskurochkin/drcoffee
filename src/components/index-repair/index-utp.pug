@@ -1,0 +1,57 @@
++include-style('index-repair')
+
+mixin point(args={})
+	.point(style=args.style)(class=!args.right ? 'point--right': 'point--left')
+		.point__head
+			.point__dot
+
+			.point__title=args.title
+		.point__body
+			h6.t3=args.title
+			p Возможные проблемы:
+			ul
+				li Неисправность бойлера
+				li Неисправность пароблока
+				li Засорение кальцием
+			p.price от 79 BYN
+
+
+.index-repair.section-margin
+	.page-header
+		.container
+			.page-header__title
+				.h1.title <span class="accent">Заболела</span> кофемашина?<br>Не беда! Doctor Coffee <span class="accent">вылечит любую болячку</span> вашей кофемашины
+
+
+	.container
+		.index-repair__inner
+			.index-repair__img
+				img(loading="lazy" src=SITE_TEMPLATE_PATH+"images/coffee.png")
+				.index-repair__points
+					+point({
+						title: 'Персонал',
+						style: 'top: 6%; left: 60%',
+					})
+
+					+point({
+						title: 'Оборудование',
+						style: 'top: 13%; left: 10%',
+						right: true
+					})
+
+					+point({
+						title: 'Цены',
+						style: 'top: 50%; left: 70%',
+					})
+
+					+point({
+						title: 'Сроки',
+						style: 'top: 80%; left: 7%',
+						right: true
+					})
+			.index-repair__link
+				a(href="#").btn.btn--primary.btn--fw.btn--lg
+					span Посмотреть все цены
+
+
+

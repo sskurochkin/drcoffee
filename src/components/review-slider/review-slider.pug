@@ -4,13 +4,24 @@
 mixin review-card(args={})
 
 	.review-card
-		.review-card__img
-			img(loading="lazy" src=SITE_TEMPLATE_PATH + args.img)
-		.review-card__title.t3=args.title
+		.review-card__head
+			.review-card__img
+				img(loading="lazy" src=SITE_TEMPLATE_PATH + 'images/team.png')
+			.review-card__title
+				.name=args.title
+				.info
+					.rate
+						.rate-item
+						.rate-item
+						.rate-item
+						.rate-item
+						.rate-item.rate-item--empty
+
+					.review-card__date 12.06.2024
 		.review-card__text=args.text
 		.review-card__link
 			a(href="#").btn.btn--black.btn--fw
-				span Подробнее
+				span читать полностью
 
 
 .index-review.section-margin
@@ -19,7 +30,7 @@ mixin review-card(args={})
 		link: 'Все отзывы'
 	})
 	.container
-		+splide({}).js-slider-partner.partner-slider
+		+splide({}).js-slider-review.review-slider
 			each i in [1,2,3]
 				li.splide__slide
 					+review-card({

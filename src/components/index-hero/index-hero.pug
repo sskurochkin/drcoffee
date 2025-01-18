@@ -1,0 +1,53 @@
++include-style('index-hero')
++include-script('index-hero')
+
+.index-hero
+	.container
+		+splide({}).js-slider-hero.hero-slider
+			each i in [1,2,3]
+				li.splide__slide
+					.hero-slide
+						.hero-slide__bg
+							img(loading="lazy" src=SITE_TEMPLATE_PATH + 'images/news-1.png')
+						.hero-slide__content
+							.hero-slide__title.t2 Только качественные запчасти от проверенных поставщиков
+							.hero-slide__text
+								p Наша организация использует только оригинальные запчасти.
+								p Это позволяет быть уверенными в надёжной работе вашей техники после ремонта
+
+		.hero-info
+			.hero-articles.hero-info__item
+				.hero-articles__head
+					.hero-info__title.t2 Статьи
+					.a(href="#").btn.btn--link
+							span Все статьи
+				.hero-articles__list
+					.hero-article
+						.hero-article__date 22.03.2023
+						a(href="#").hero-article__link Ремонт кофемашин Saeco в Минске от компании Doctor Coffee
+					.hero-article
+						.hero-article__date 22.03.2023
+						a(href="#").hero-article__link Ремонт кофемашин Saeco в Минске от компании Doctor Coffee
+					.hero-article
+						.hero-article__date 22.03.2023
+						a(href="#").hero-article__link Купить кофемашину DR.COFFEE В Минске?
+					.hero-article
+						.hero-article__date 22.03.2023
+						a(href="#").hero-article__link Дисплейный модуль Nivona 830 831 840 845 848 850 855 858 877
+			.hero-repair.hero-info__item
+				.hero-info__title.t2 Приедем и заберем вашу кофемашину
+				a(href="#").hero-repair__link Подробнее
+				.hero-repair__img
+					img(loading="lazy" src=SITE_TEMPLATE_PATH + 'images/doctor.png')
+
+			.hero-info__links
+				.hero-info__item.hero-term
+					.hero-info__title.t2 Чиним кофемашины с 2015
+					a(href="#").hero-repair__link Подробнее
+				.hero-info__item.hero-gar
+					.hero-info__bg
+						img(loading="lazy" src=SITE_TEMPLATE_PATH + 'images/bg.png')
+					.hero-info__title.t2 Гарантия на ремонт до 6 месяцев!
+					a(href="#").hero-repair__link Подробнее
+
+

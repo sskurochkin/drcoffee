@@ -2,36 +2,26 @@ window.addEventListener('load', function (event) {
 
 	!window.reinit && (window.reinit = {})
 
-	window.reinit.reviewSlider = function () {
+	window.reinit.heroSlider = function () {
 
 		const options = {
 			rootMargin: '100px',
 			threshold: 0
 		};
 
-		let reviewSlider = document.querySelectorAll('.js-slider-review');
-		let length = reviewSlider[0]?.querySelectorAll('.splide__slide').length;
+		let heroSlider = document.querySelectorAll('.js-slider-hero');
 
-
-		if (reviewSlider.length) {
+		if (heroSlider.length) {
 
 			const initSlider = (el) => {
 
-				reviewSlider.forEach(el => {
+				heroSlider.forEach(el => {
 					let splide = new Splide(el, {
 
 						lazyLoad: 'sequential',
 						pagination: false,
 						arrows: true,
-						perMove: 1,
-						perPage: 3,
 						gap: '2rem',
-						breakpoints:{
-							980:{
-								autoWidth: true,
-								gap: 16,
-							},
-						}
 					});
 
 
@@ -41,7 +31,7 @@ window.addEventListener('load', function (event) {
 				});
 			};
 
-			reviewSlider.forEach((el) => {
+			heroSlider.forEach((el) => {
 				const observer = new IntersectionObserver((entries, observer) => {
 					if (entries[0].isIntersecting && entries[0].target.classList.contains('inited') == false) {
 						initSlider(el);
@@ -54,7 +44,7 @@ window.addEventListener('load', function (event) {
 
 	};
 
-	window.reinit.reviewSlider();
+	window.reinit.heroSlider();
 
 
 })
