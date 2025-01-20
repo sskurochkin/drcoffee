@@ -3,11 +3,16 @@
 //header.header
 header.header
 	.container
-		.header__inner
+		.header__inner(:class="isMobileMenuOpen && 'active'")
 			.header__left
 				a(href="#").header__logo
 					img(loading="lazy" src=SITE_TEMPLATE_PATH + 'images/logo.png')
 
+				.burger(@click="isMobileMenuOpen = !isMobileMenuOpen" :class="isMobileMenuOpen && 'active'")
+					span
+					span
+					span
+					span
 			.header__right
 				.header__top
 					.header__top-location
@@ -44,20 +49,15 @@ header.header
 					.header__btn.btn.btn--black(data-target="modal-form" data-toggle="modal")
 						span заказать ремонт
 
-					.burger(@click="isMobileMenuOpen = true")
-						span
-						span
-						span
-						span
-	.mobile-menu(:class="isMobileMenuOpen && 'active'")
 
 
-			.mobile-menu__close(@click="isMobileMenuOpen = false")
-				+icon('i-close')(style="width:18px;height:18px;")
+			//
+			//.mobile-menu__close(@click="isMobileMenuOpen = false")
+			//	+icon('i-close')(style="width:18px;height:18px;")
+			//
 
 
-
-	.overlay(@click="isMobileMenuOpen = false"
-		:class="isMobileMenuOpen && 'visible'")
+		.overlay(@click="isMobileMenuOpen = false"
+			:class="isMobileMenuOpen && 'visible'")
 
 

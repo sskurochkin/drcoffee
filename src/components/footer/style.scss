@@ -7,17 +7,39 @@
 	background-color: $n5;
 	color: $n2;
 
+	.desktop{
+		@media (max-width: $xs - 1) {
+			display: none;
+		}
+	}
+	@media (max-width: $md - 1) {
+
+	}
+	@media (min-width: $xs) {
+		.mobile{
+			display: none;
+		}
+	}
+
 	&__inner{
 		display: grid;
 		grid-template-columns: 2fr 3fr;
 		justify-content: space-between;
 		gap: 8rem;
+		@media (max-width: $sm - 1) {
+			flex-direction: column;
+			gap: 20px;
+			display: flex;
+		}
 	}
 
 	&__copy{
 		display: flex;
 		flex-direction: column;
 		gap: 1.6rem;
+		@media (max-width: $sm - 1) {
+			order: 2;
+		}
 		&-title{
 			color: #ffffff;
 		}
@@ -29,13 +51,24 @@
 	&__menu{
 		display: flex;
 		justify-content: space-between;
+		@media (max-width: $xs - 1) {
+			justify-content: flex-start;
+			flex-wrap: wrap;
+			gap: 40px 80px;
+		}
 	}
 	&__item{
 		flex-direction: column;
 		display: flex;
 		gap: 1.6rem;
+		@media (max-width: $xs - 1) {
+			&:last-child{
+				width: 100%;
+			}
+		}
 		&-title{
 			text-transform: uppercase;
+			color: #ffffff;
 		}
 		&-body{
 			flex-direction: column;
@@ -68,5 +101,32 @@
 			color: #fff;
 		}
 	}
+	&-link{
+		color: $n2;
+		transition: all ease .3s;
+	}
+	&__phone{
+		color: $primary;
+		transition: all ease .3s;
+		&:hover {
+			@media (hover: hover) {
+				cursor: pointer;
+				color: $primary-hover;
+			}
+		}
+	}
+	&__btn{
+		@media (max-width: $xs - 1) {
+			margin-top: 20px;
+		}
+	}
 
+}
+a.footer-link{
+	&:hover {
+		@media (hover: hover) {
+			cursor: pointer;
+			color: $primary;
+		}
+	}
 }

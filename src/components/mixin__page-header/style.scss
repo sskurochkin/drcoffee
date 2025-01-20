@@ -15,6 +15,12 @@
 			align-items: flex-end;
 		}
 	}
+	&.mb-6{
+		margin-bottom: 6rem;
+		@media (max-width: $md - 1) {
+			margin-bottom: 40px;
+		}
+	}
 
 	&--index{
 		.page-header__title{

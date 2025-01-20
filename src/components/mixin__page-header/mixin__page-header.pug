@@ -1,6 +1,6 @@
 mixin page-header(args={})
 	+include-style('mixin__page-header')
-	.page-header(class=args.mod)(сlass=args.h1 ? 'mb-6': '')
+	.page-header(class=args.mod)
 		.container
 			if(args.breadcrumb)
 				+breadcrumbs({
