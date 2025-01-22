@@ -2,21 +2,14 @@ mixin news-card(args={})
 	+include-style('mixin__news-card')
 	a(href="#").news-card
 		.news-card__img
-			+lazy-img({
-				img: args.img,
-			})
-			.news-card__tag
-				span кофейные заметки
+			img(loading="lazy" src=SITE_TEMPLATE_PATH +'images/'+ args.img)
+
+
 		.news-card__content
-			.news-card__info
-				.news-card__date
-					span 26 октября 2023
-				.news-card__time 5 мин. на чтение
-			.h1.news-card__title=args.title
-			.news-card__descr Более миллиона людей пьют кофе каждый день. Кто-то готовит себе напиток дома, кто-то по принципу удобства выбирает кофейню рядом готовит себе напиток дома, кто-то по принципу удобства выбирает кофейню рядом
-			.news-card__footer
-				.btn-link
-					.btn.btn--nav
-						span Читать полностью
-					.btn.btn--nav.btn--icon
-						+icon('i-arr-btn')(style="width:20px;height:20px;")
+
+			.news-card__title=args.title
+			.news-card__date
+				span 26 октября 2023
+			.news-card__tags
+				.news-card__tag #кофейные
+				.news-card__tag #заметки

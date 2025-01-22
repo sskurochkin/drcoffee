@@ -1,12 +1,15 @@
 +include-style('form')
 
-.form
+.form.form--white
 	.form__bg
 		img(loading="lazy" src=SITE_TEMPLATE_PATH+'images/bg.png')
 	.form__inner
 		.form__left
-			.form__title.h1 Остались вопросы?
+			.form__title.h1 Заявка принята!
 			.form__subtitle Оставьте заявку, и наши специалисты свяжутся с вами, чтобы ответить на все ваши вопросы!
+
+			.form__title.h1 Заявка на ремонт
+			.form__subtitle Спасибо за обращение, наши сотрудники свяжутся с вами в течение 10 минут.
 		.form__right
 			+input({
 				label: 'Ваше имя',
@@ -49,3 +52,4 @@
 
 			.form__submit
 				button(type="submit").btn.btn--primary.btn--lg.btn--fw заказать ремонт
+				button(data-dismiss="modal" aria-label="Close").btn.btn--primary.btn--lg.btn--fw отлично

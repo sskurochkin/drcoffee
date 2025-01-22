@@ -22,6 +22,11 @@
 			color: #FFF;
 		}
 	}
+	&--white{
+		.form-control{
+			background-color: $n1;
+		}
+	}
 	&__bg{
 		position: absolute;
 		inset: 0;

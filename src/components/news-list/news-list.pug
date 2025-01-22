@@ -1,4 +1,5 @@
 +include-style('news-list')
++include-style('index-hero')
 
 -
 	var items = [
@@ -6,8 +7,14 @@
 			img: 'news-1.png',
 			title: 'Кофейни используют ИИ для улучшения работы бариста',
 			btn: 'Заказать услугу'
-		}, {
+		},
+		{
 			img: 'news-2.png',
+			title: 'Верни мне мой 1999? История о развитии кофейного рынка в цифрах',
+			btn: 'Заказать услугу'
+		},
+		{
+			img: 'news-1.png',
 			title: 'Верни мне мой 1999? История о развитии кофейного рынка в цифрах',
 			btn: 'Заказать услугу'
 		},
@@ -18,29 +25,42 @@
 		},
 
 	]
+.container
 
-.news
-	.news-head
-		.news-head__tag Новости
+	.news
+		.news-left
+			.news-tags
+				.news-tags__title.t2 Теги
+				.news-tags__list
+					a(href="#").news-tags__item #о нас
+					a(href="#").news-tags__item #Dr.Coffee
+					a(href="#").news-tags__item #Jura
+					a(href="#").news-tags__item #поломки
+					a(href="#").news-tags__item #запчасти
+					a(href="#").news-tags__item #акции
+					a(href="#").news-tags__item #полезное
+					a(href="#").news-tags__item #поломки
+					a(href="#").news-tags__item #запчасти
 
-		ul.news-head__nav
-			li.active
-				a(href="").btn.btn--nav.btn--fw
-					span Все темы
-			li
-				a(href="").btn.btn--nav.btn--fw
-					span Кофейные заметки
-			li
-				a(href="").btn.btn--nav.btn--fw
-					span Чайные заметки
-			li
-				a(href="").btn.btn--nav.btn--fw
-					span Новости Roast.by
+			.news-ads.hero-info__links
+				.hero-info__item.hero-term
+					.hero-info__title.t2 Чиним кофемашины с 2015
+					a(href="#").hero-repair__link Подробнее
+				.hero-info__item.hero-gar
+					.hero-info__bg
+						img(loading="lazy" src=SITE_TEMPLATE_PATH + 'images/bg.png')
+					.hero-info__title.t2 Гарантия на ремонт до 6 месяцев!
+					a(href="#").hero-repair__link Подробнее
 
-	.news-list
-		each item in items
 
-			+news-card({
-				title: item.title,
-				img: item.img
-			})
+
+		.news-list
+			.news-list__title.t2 Статьи
+			.news-list__grid
+				each item in [...items, ...items]
+					+news-card({
+						title: item.title,
+						img: item.img
+					})
+
+			include ../pagination/pagination

@@ -6,7 +6,10 @@
 	align-items: center;
 	overflow: auto;
 	@media (max-width: $md - 1) {
-		margin-bottom: 8px;
+		//margin-bottom: 4px;
+		//padding-bottom: 6px;
+		padding: 0 16px 6px;
+		margin: 0 -16px 4px;
 	}
 
 

@@ -1,12 +1,13 @@
 extends ../../layout/layout
 
 block vars
-	- var pageTitle = 'Статьи'
-	- var pageBodyClass = ''
+	- var pageTitle = 'Цены'
+	- var pageBodyClass = 'price'
 	- var dir = './'
 
 
 block premain
+
 
 
 block main
@@ -14,10 +15,14 @@ block main
 		h1: true,
 		mod: 'mb-6',
 		breadcrumb: true,
-		title: 'Статьи',
+		title: 'Цены',
 		link: false
 	})
-	include ../../components/news-list/news-list
+
+	include ../../components/price/price
+	include ../../components/form/page-form
+
+
 
 
 block pageModal
@@ -30,3 +35,7 @@ block componentsStyles
 	+style-includer()
 block componentsScripts
 	+componentsScripts-includer()
+block scripts
+
+	// Скрипты для всех страниц
+	script(src="./js/vendor/splide.min.js" defer)
