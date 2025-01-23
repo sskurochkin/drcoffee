@@ -122,6 +122,7 @@ input {
 	font-weight: 900;
 	line-height: 1.2;
 	text-transform: uppercase;
+	letter-spacing: .2rem;
 	@media (max-width: $md - 1) {
 		font-size: 28px;
 	}

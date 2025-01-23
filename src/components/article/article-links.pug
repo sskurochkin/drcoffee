@@ -1,24 +1,30 @@
+-
+	var items = [
+
+		{
+			img: 'news-2.png',
+			title: 'Идеальное средство для удаления накипи «Doctor Coffee»',
+			btn: 'Заказать услугу'
+		},
+		{
+			img: 'news-1.png',
+			title: 'Дисплейный модуль Nivona 830 831 840 845 848 850 855 858 877',
+			btn: 'Заказать услугу'
+		},
+		{
+			img: 'news-3.png',
+			title: 'Ремонт кофемашин Saeco в Минске от компании Doctor Coffee',
+			btn: 'Подробнее'
+		},
+
+	]
+
 .article-links
-	.article-links__title.h2 Ещё статьи
+	.page-header__title
+		.h1.title Ещё статьи
 	.article-links__list
-		a(href="#").article-link
-			.article-link__tag кофейные заметки
-			.article-link__title Поездка Roast.by на Руандийские плантации 
-			.article-link__info.article-info
-				.article-info__date 23 июля 2024
-				.article-info__time 5 мин. на чтение
-		a(href="#").article-link
-			.article-link__tag кофейные заметки
-			.article-link__title Поездка Roast.by на Руандийские плантации 
-			.article-link__info.article-info
-				.article-info__date 23 июля 2024
-				.article-info__time 5 мин. на чтение
-		a(href="#").article-link
-			.article-link__tag кофейные заметки
-			.article-link__title Почему кофе заставляет нас бежать в туалет: уникальный взгляд на утренний ритуал
-			.article-link__info.article-info
-				.article-info__date 23 июля 2024
-				.article-info__time 5 мин. на чтение
-
-
-
+		each item in [...items]
+			+news-card({
+				title: item.title,
+				img: item.img
+			})

@@ -4,12 +4,14 @@
 	margin-bottom: 1.6rem;
 	display: flex;
 	align-items: center;
-	overflow: auto;
+	gap: .8rem;
+	//overflow: auto;
 	@media (max-width: $md - 1) {
-		//margin-bottom: 4px;
-		//padding-bottom: 6px;
-		padding: 0 16px 6px;
-		margin: 0 -16px 4px;
+		margin-bottom: 4px;
+		padding-bottom: 6px;
+		//padding: 0 16px 6px;
+		//margin: 0 -16px 4px;
+		flex-wrap: wrap;
 	}
 
 
@@ -17,9 +19,9 @@
 		display: inline-block;
 		position: relative;
 
-		&:not(:last-child){
-			margin-right: .8rem;
-		}
+		//&:not(:last-child){
+		//	margin-right: .8rem;
+		//}
 
 	}
 	&__link{
@@ -62,7 +64,7 @@ span.breadcrumbs__link {
 			display: inline-block;
 			overflow: hidden;
 			width: 100%;
-			max-width: calc(100vw - 200px);
+			max-width: calc(100vw - 100px);
 			text-overflow: ellipsis;
 		}
 	}
