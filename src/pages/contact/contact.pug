@@ -1,0 +1,41 @@
+extends ../../layout/layout
+
+block vars
+	- var pageTitle = 'Контакты'
+	- var pageBodyClass = ''
+	- var dir = './'
+
+
+block premain
+
+
+
+block main
+	+page-header({
+		h1: true,
+		mod: 'mb-6',
+		breadcrumb: true ,
+		title: 'Контакты',
+		link: false
+	})
+
+	include ../../components/map/map
+	include ../../components/form/page-form
+
+
+
+
+block pageModal
+
+block componentsCriticalStyles
+	+componentsCriticalStyles-includer()
+block vendorScripts
+	+vendorScripts-includer()
+block componentsStyles
+	+style-includer()
+block componentsScripts
+	+componentsScripts-includer()
+block scripts
+
+	// Скрипты для всех страниц
+	script(src="./js/vendor/splide.min.js" defer)

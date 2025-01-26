@@ -1,0 +1,28 @@
++include-style('repair')
++include-script('repair')
++include-style('mixin__brand-card')
+include ../vars/search
+
+
+.container
+	.repair(x-data=`repair(${JSON.stringify(brands)})`)
+		.repair-search
+			.repair-search__input
+				input.form-control(x-model='query' :input="search" placeholder="Поиск по бренду")
+				.repair-search__clear(x-show="query.length" @click="clear")
+					+icon('i-close')(style="width:2.4rem;height:2.4rem;")
+		.repair-inner
+			template(x-if="!filteredItems.length")
+				.repair-empty
+					.repair-empty__text.t3 По вашему запросу <span x-text="query"></span> ничего не найдено.<br> Попробуйте его изменить
+			template(x-if="filteredItems.length")
+				.repair-cards
+					template(x-for="item in filteredItems")
+						.brand-card
+							.brand-card__img
+								img(loading="lazy" :src="'/html/' + item.img")
+							.brand-card__title(x-text="item.title")
+							.brand-card__text(x-text="item.text")
+							.brand-card__link
+								a(:href="item.link").btn.btn--black.btn--fw
+									span Подробнее

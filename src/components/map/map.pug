@@ -1,0 +1,41 @@
++include-style('map')
+
+
+.contacts-map
+	.container
+		.map
+			.map-info
+				.dropdown
+				.map-info__title
+					span.t2 Doctor Coffee
+					.rate
+						.rate-item
+						.rate-item
+						.rate-item
+						.rate-item
+						.rate-item.rate-item--empty
+				.map-info__links
+					a(href="#").map-info__link
+						+icon('i-phone')(style="width:2.4rem;height:2.4rem;")
+						span +375 (17) 388-03-06 
+					a(href="#").map-info__link
+						+icon('i-mail')(style="width:2.4rem;height:2.4rem;")
+						span +375 (17) 388-03-06 
+					.map-info__link
+						+icon('i-location')(style="width:2.4rem;height:2.4rem;")
+						span +375 (17) 388-03-06 
+				.map-info__metro
+					.metro-item
+						.metro-item__icon M
+						.metro-item__name Восток
+						.metro-item__dist 3,4 км
+					.metro-item
+						.metro-item__icon M
+						.metro-item__name Московская
+						.metro-item__dist 3,4 км
+					.metro-item
+						.metro-item__icon M
+						.metro-item__name Парк Челюскинцев
+						.metro-item__dist 3,4 км
+
+			.map-container

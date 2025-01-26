@@ -10,6 +10,17 @@
 		align-items: center;
 		justify-content: center;
 		fill: $n2;
+		transition: all ease .3s;
+		&:hover {
+			@media (hover: hover) {
+				cursor: pointer;
+				fill: $primary;
+				svg{
+
+				}
+
+			}
+		}
 		@media (max-width: $md - 1) {
 			svg{
 				min-width: 24px;
