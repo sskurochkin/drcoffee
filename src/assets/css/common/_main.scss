@@ -22,6 +22,8 @@ body {
 	font-size: 1.8rem;
 	background-color: $bg;
 	font-weight: 500;
+	letter-spacing: 0.036rem;
+
 	font-family: "Fira", Arial, Verdana, sans-serif;
 	@media (max-width: $md - 1) {
 		font-size: 14px;
@@ -135,6 +137,7 @@ input {
 	font-size: 2.0rem;
 	font-weight: 900;
 	line-height: 1.2;
+	letter-spacing: 0.1rem;
 	text-transform: uppercase;
 }
 
@@ -143,6 +146,7 @@ input {
 	font-weight: 900;
 	line-height: 1.22;
 	text-transform: uppercase;
+	letter-spacing: 0.09rem;
 	@media (max-width: $md - 1) {
 		font-size: 16px;
 	}
@@ -152,6 +156,7 @@ input {
 	font-size: 1.6rem;
 	font-weight: 900;
 	line-height: 1.25;
+	letter-spacing: 0.08rem;
 	text-transform: uppercase;
 }
 
@@ -159,6 +164,7 @@ input {
 	font-size: 1.4rem;
 	font-weight: 900;
 	line-height: 1.21;
+	letter-spacing: 0.08rem;
 	text-transform: uppercase;
 }
 
@@ -166,12 +172,16 @@ input {
 	font-size: 2.8rem;
 	font-weight: 700;
 	line-height: 1.22;
+	letter-spacing: 0.056rem;
+
 }
 
 .t2 {
 	font-weight: 700;
 	font-size: 2.4rem;
 	line-height: 1.25;
+	letter-spacing: 0.048rem;
+
 	@media (max-width: $md - 1) {
 		font-size: 16px;
 	}
@@ -180,4 +190,6 @@ input {
 	font-weight: 600;
 	font-size: 2.2rem;
 	line-height: 1.25;
+	letter-spacing: 0.044rem;
+
 }

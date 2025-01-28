@@ -2,19 +2,33 @@
 
 .map {
 
-	height: 55rem;
-	border-radius: 2.4rem;
-	overflow: hidden;
-	position: relative;
+
+	@media (min-width: $md){
+		height: 55rem;
+		border-radius: 2.4rem;
+		overflow: hidden;
+		position: relative;
+	}
 
 
 	&-container {
-		position: absolute;
-		z-index: 1;
-		inset: 0;
-		width: 100%;
-		height: 100%;
-		background-color: $n1;
+		background-color: $n2;
+		@media (min-width: $md) {
+			position: absolute;
+			z-index: 1;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+
+		}
+		@media (max-width: $md - 1) {
+			width: 100%;
+			aspect-ratio: 1.8;
+			border-radius: 12px;
+			overflow: hidden;
+			margin-top: 16px;
+		}
+
 	}
 	&-info{
 		@media (min-width: $md){
@@ -29,21 +43,25 @@
 			width: 40rem;
 			z-index: 2;
 		}
+		position: relative;
 	}
 
-	.dropdown{
-
-	}
 
 }
 
 .map-info{
+	display: flex;
+	flex-direction: column;
 	&__links{
 		margin-top: 4rem;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 		gap: 1.2rem;
+		@media (max-width: $md - 1) {
+			margin-top: 16px;
+		}
+
 	}
 	&__link{
 		display: inline-flex;
@@ -51,6 +69,10 @@
 		gap: 1.2rem;
 		fill: #ffffff;
 		color: #ffffff;
+		@media (max-width: $md - 1) {
+			color: $mc;
+			fill: $mc;
+		}
 	}
 	a{
 		transition: all ease .3s;
@@ -69,6 +91,9 @@
 		flex-direction: column;
 		gap: 1.2rem;
 		align-items: flex-start;
+		@media (max-width: $md - 1) {
+			margin-top: 16px;
+		}
 	}
 }
 
@@ -89,9 +114,93 @@
 		font-size: 1.4rem;
 		font-weight: 400;
 		font-family: Arial, Verdana, sans-serif;
+		@media (max-width: $md - 1) {
+			color: #ffffff;
+			background-color: $mc;
+			width: 20px;
+			height: 20px;
+			border-radius: 4px;
+			font-size: 11px;
+		}
 	}
 	&__dist{
 		color: $primary;
 		font-weight: 700;
+	}
+}
+
+.dropdown{
+	position: relative;
+	margin-left: auto;
+	margin-bottom: 2.4rem;
+	@media (max-width: $md - 1) {
+		position: absolute;
+		right: 0;
+	}
+	&.active{
+		.dropdown-head{
+			svg{
+				transform: rotate(180deg);
+			}
+		}
+	}
+	&-head{
+		width: 20rem;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		height: 4rem;
+		border-radius: 1000px;
+		padding: 0 1rem   ;
+		color: #ffffff;
+		gap: .6rem;
+		fill: #ffffff;
+		background-color: $n4;
+		cursor: pointer;
+		@media (max-width: $md - 1) {
+			background-color: $mc;
+			padding: 0 12px;
+			width: auto;
+		}
+		svg{
+			//margin-left: auto;
+			transition: all ease .3s;
+		}
+	}
+
+	&-body{
+		position: absolute;
+		right: 0;
+		top: calc(100% + 4px);
+		padding: 2.4rem;
+		width: 30rem;
+		background-color: $n5;
+		border-radius: 2.4rem;
+		color: #ffffff;
+		z-index: 1;
+		opacity: 0;
+		visibility: hidden;
+		transition: all ease .3s;
+		@media (max-width: $md - 1) {
+			width: 240px;
+		}
+		&.active{
+			opacity: 1;
+			visibility: visible;
+		}
+
+		&__list{
+			margin-top: 4rem;
+			display: flex;
+			flex-direction: column;
+			gap: 1.6rem;
+		}
+	}
+
+	&-item{
+		display: flex;
+		justify-content: space-between;
+		gap: 2rem;
+		white-space: nowrap;
 	}
 }
